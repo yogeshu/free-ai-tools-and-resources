@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yogeshu/free-ai-tools-and-resources/schemas/model.schema.json",
+  "title": "LLM model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "providerId", "access", "capabilities", "lastVerified"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "providerId": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "creditCardRequired"],
+      "properties": {
+        "type": { "type": "string", "enum": ["permanent-free", "promotional", "trial", "paid", "local"] },
+        "creditCardRequired": { "type": "string", "enum": ["yes", "no", "unknown"] },
+        "limits": { "type": "string" }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "contextWindow": { "type": "integer", "minimum": 1 },
+    "lastVerified": { "type": "string", "format": "date" },
+    "notes": { "type": "string" }
+  }
+}

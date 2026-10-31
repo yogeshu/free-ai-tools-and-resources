@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-local-model",
+    "name": "Example Local Model",
+    "providerId": "example-provider",
+    "access": {
+      "type": "local",
+      "creditCardRequired": "no"
+    },
+    "capabilities": ["text-generation"],
+    "lastVerified": "2026-10-31",
+    "notes": "Placeholder for a locally runnable model record."
+  }
+]

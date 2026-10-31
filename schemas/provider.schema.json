@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yogeshu/free-ai-tools-and-resources/schemas/provider.schema.json",
+  "title": "LLM provider",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "website", "docs", "apiCompatibility", "privacy", "lastVerified"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "website": { "type": "string", "format": "uri" },
+    "docs": { "type": "string", "format": "uri" },
+    "apiCompatibility": { "type": "string", "enum": ["openai-compatible", "native", "both", "unknown"] },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["promptLeavesDevice", "trainingPolicy", "retentionPolicy"],
+      "properties": {
+        "promptLeavesDevice": { "type": "boolean" },
+        "trainingPolicy": { "type": "string", "minLength": 1 },
+        "retentionPolicy": { "type": "string", "minLength": 1 }
+      }
+    },
+    "lastVerified": { "type": "string", "format": "date" },
+    "notes": { "type": "string" }
+  }
+}

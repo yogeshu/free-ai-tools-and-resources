@@ -1,0 +1,16 @@
+[
+  {
+    "id": "example-model",
+    "name": "Example Model",
+    "providerId": "example-provider",
+    "access": {
+      "type": "promotional",
+      "creditCardRequired": "unknown",
+      "limits": "Replace with an officially published quota."
+    },
+    "capabilities": ["text-generation"],
+    "contextWindow": 4096,
+    "lastVerified": "2026-10-31",
+    "notes": "Placeholder record; verify all claims before publishing."
+  }
+]
