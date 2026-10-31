@@ -1,0 +1,16 @@
+[
+  {
+    "id": "example-provider",
+    "name": "Example Provider",
+    "website": "https://example.com/",
+    "docs": "https://example.com/docs",
+    "apiCompatibility": "unknown",
+    "privacy": {
+      "promptLeavesDevice": true,
+      "trainingPolicy": "Replace this example with the provider's official training policy.",
+      "retentionPolicy": "Replace this example with the provider's official retention policy."
+    },
+    "lastVerified": "2026-10-31",
+    "notes": "Placeholder record demonstrating the required fields. Do not treat it as a real offer."
+  }
+]
